@@ -1,0 +1,30 @@
+[
+    {
+        "date": "2021-07-09",
+        "description": "แม่ให้เงินและจ่ายค่าขนม",
+        "income": 1000,
+        "expenses": 10,
+        "total": 990 
+    },
+    {
+        "date": "2021-07-09",
+        "description": "ซื้อขนมปัง",
+        "income": 0,
+        "expenses": 20,
+        "total": 970 
+    },
+    {
+        "date": "2021-07-09",
+        "description": "ซื้อน้ำเปล่า",
+        "income": 0,
+        "expenses": 10,
+        "total": 960 
+    },
+    {
+        "date": "2021-07-09",
+        "description": "พ่อให้เงินเพิ่ม",
+        "income": 90,
+        "expenses": 0,
+        "total": 1050
+    }
+]

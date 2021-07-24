@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
-  </div>
+  </div> 
 </template>
 
 <style lang="scss">
@@ -15,6 +11,15 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body.vsc-initialized {
+    background-color: rgb(221, 213, 203);
+    background-image: url("https://image.flaticon.com/icons/png/512/2916/2916115.png");
+    background-repeat: no-repeat;
+    background-position: 1000px;
+    background-attachment: scroll;
+    background-size: 150px;
 }
 
 #nav {
