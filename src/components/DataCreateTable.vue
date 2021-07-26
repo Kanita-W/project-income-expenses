@@ -22,6 +22,10 @@
               </tr>
           </tbody>
       </table>
+      <div class="total_Amount">
+          TotalAmount : {{ total_a }} 
+          <button @click="refresh_total">refresh</button>
+      </div>
   </div>
 </template>
 
@@ -31,8 +35,10 @@ export default {
     data() {
         return {
             dataIncExp: [],
+            total_a: this.initTotal_a||0
         }
     },
+    props:['initTotal_a'],
     created(){
         this.fetchdataIncExp()
     },
@@ -41,7 +47,17 @@ export default {
             //ใช้ dis เรียก action จาก Store ด้วยชื่อ Store.dis("name action")
             await DataIncExpStore.dispatch('fetchdataIncExp')
             this.dataIncExp = DataIncExpStore.getters.dataIncExp
+            this.dataIncExp.forEach(element => {
+                this.total_a += element.total
+            });
         },
+
+        refresh_total(){
+            this.total_a = 0
+            this.dataIncExp.forEach(element => {
+                this.total_a += element.total
+            });
+        }
     }
 }
 </script>
@@ -117,5 +133,13 @@ th {
 
 .total {
     color: royalblue;
+}
+
+.total_Amount {
+    border: 1px solid rgb(172, 240, 15);
+    background-color: rgb(140, 243, 44);
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 15px;
 }
 </style>

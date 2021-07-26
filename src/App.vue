@@ -13,7 +13,7 @@
   color: #2c3e50;
 }
 
-body.vsc-initialized {
+body {
     background-color: rgb(221, 213, 203);
     background-image: url("https://image.flaticon.com/icons/png/512/2916/2916115.png");
     background-repeat: no-repeat;
